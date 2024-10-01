@@ -4,10 +4,11 @@ import gitimg2 from '../assets/github 2.png'
 import linkdinImg from '../assets/linked din.jpeg'
 import { Link } from 'react-router-dom'
 
+
 const Card = () => {
     let [data, setData] = useState([]);
 const fetchData = async() => {
-  let a = await fetch('https://skolar-student-backend-server.vercel.app/fetchall');
+  let a = await fetch(import.meta.env.VITE_MONGODB_URL_FETCHALL);
   let b = await a.json();
   setData(b)
   // console.log(setData)
@@ -44,8 +45,8 @@ useEffect(()=> {
 
         </div>
         })
-      }
-        </div>
+      } 
+      </div>
       </>
   )
 }

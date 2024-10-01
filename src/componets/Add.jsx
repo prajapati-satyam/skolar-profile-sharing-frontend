@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-// import '../index.css'
+
 import { Link } from 'react-router-dom'
+
 const Add = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -24,7 +25,7 @@ const Add = () => {
         // console.log(formData); // Handle form submission
         let a = JSON.stringify(formData);
         // console.log(a)
-        let fetch = await axios.post('https://skolar-student-backend-server.vercel.app/add',formData, {
+        let fetch = await axios.post(import.meta.env.VITE_MONGODB_URL_ADD,formData, {
             headers: {
                 'Content-Type': 'application/json'
               } 
