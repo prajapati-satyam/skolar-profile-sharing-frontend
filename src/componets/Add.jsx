@@ -95,7 +95,7 @@ const Add = () => {
             value={formData.email}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
-            placeholder="Enter your email"
+            placeholder="Enter your GitHub profile Link"
             required
           />
         </div>
@@ -111,7 +111,7 @@ const Add = () => {
             value={formData.password}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
-            placeholder="Enter your password"
+            placeholder="Enter your LinkedIn profile Link"
             required
           />
         </div>
